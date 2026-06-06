@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple ATM System</h1>
+    <script>
+       
+        var bal=Number(prompt("Enter bank balance"))
+        var ch=Number(prompt("-----ATM Menus-----\n1.Check Balance\n2.Withdraw\n3.Deposit\n4.Exit"))
+        
+
+        switch(ch)
+        {
+            case 1:
+                document.write("Your bank Balance is:",bal)
+                break;
+
+            case 2:
+                var withdraw=Number(prompt("Enter the withdraw amount"));
+                
+                if(withdraw<=bal)
+                {
+                    bal=bal-withdraw
+                    document.write(withdraw ,"Withdrawn Successfully<br>")
+                    document.write("Avilable Balance:",bal)
+                }
+                else
+                {
+                    document.write("Withdrawn unsuccessfully")
+                }
+                break;
+
+            case 3:
+                var deposit=Number(prompt("Enter the deposit amount"))
+                if(bal>deposit)
+                {
+                    bal+=deposit
+                    document.write(deposit,"Deposited Successfully\n")
+                    document.write("Avilable balance:",bal)
+                }
+                else
+                {
+                    document.write("Deposited unsuccessfully")
+                }
+                break;
+
+            case 4:
+                document.write("Thank you for Choosing us");
+                break;
+
+            default:
+                document.write("Invalid choice");
+                break;
+
+           
+
+        }
+    </script>
+</body>
+</html>
